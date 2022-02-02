@@ -1,0 +1,26 @@
+@import "../../../styles/helpers.scss";
+
+.user-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+
+  .button {
+    max-width: 400px;
+    width: 100%;
+    height: 68px;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px 0 rgba(0, 167, 255, 0.15);
+    border: solid 1px #00d53a;
+    background-color: #fff;
+
+    @include center;
+    gap: 20px;
+
+    p {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #000;
+    }
+  }
+}
