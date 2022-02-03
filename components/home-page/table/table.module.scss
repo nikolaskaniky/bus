@@ -119,3 +119,30 @@ section.table {
     }
   }
 }
+
+@media (max-width: 420px) {
+  section.table {
+    .choose-type {
+      justify-content: center;
+    }
+
+    .route {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+
+      .button {
+        grid-column: auto;
+        max-width: 100%;
+      }
+
+      .from,
+      .to,
+      .date,
+      .persons {
+        .input {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
