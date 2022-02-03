@@ -7,7 +7,14 @@ const Discover = () => {
   return (
     <section className={classes.discover}>
       <div className={classes["action-box"]}>
-        <Image src={discoverMap} width={420} height={220} alt="img" />
+        <div className={classes["image-wrapper"]}>
+          <Image
+            src={discoverMap}
+            layout='fill'
+            alt="img"
+            objectFit="cover"
+          />
+        </div>
         <div className={classes.text}>
           <h1>Descopera toate destinatiile</h1>
           <p>Alege din peste 2500 destinatii de calatorie in 36 de tari</p>

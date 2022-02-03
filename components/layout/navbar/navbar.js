@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./navbar.module.scss";
 import Image from "next/image";
 import flag from "../../../assets/images/navbar/flag.svg";
 import arrowDown from "../../../assets/images/navbar/arrow-down.svg";
 import user from "../../../assets/images/navbar/user.svg";
+import NavbarMedia from "./media/navbar-media";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
+  const [mediaDropdown, setMediaDropdown] = useState(false);
+  const mediaDropdownHandler = () =>
+    setMediaDropdown((prev) => setMediaDropdown(!prev));
+
   return (
     <header className={classes.navbar}>
       <section className={classes["navbar-wrapper"]}>
@@ -14,7 +20,7 @@ const Navbar = () => {
             NEEDA<span>BUS</span>
           </h1>
         </div>
-
+        {/* //! menu */}
         <ul className={classes.menu}>
           <li>
             <p>Planificati-va calatoria</p>
@@ -27,6 +33,23 @@ const Navbar = () => {
           <li>Informatii de ultima ora</li>
           <li>Ajutor</li>
         </ul>
+
+        <ul
+          className={`${classes["media-menu"]} ${
+            mediaDropdown ? classes.active : undefined
+          }`}
+          onClick={mediaDropdownHandler}
+        >
+          <div className={classes.line}></div>
+          <div className={classes.line}></div>
+          <div className={classes.line}></div>
+        </ul>
+
+        <AnimatePresence>
+          {mediaDropdown && (
+            <NavbarMedia onClose={mediaDropdownHandler} motion={motion} />
+          )}
+        </AnimatePresence>
 
         <div className={classes.actions}>
           <div className={classes["flag-menu-item"]}>
