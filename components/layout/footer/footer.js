@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import classes from "./footer.module.scss";
-import googlePlay from "../../../assets/images/home-page/footer/googlePlay@3x.png";
-import appleStore from "../../../assets/images/home-page/footer/appleStore@3x.png";
+import googlePlay from "../../../assets/images/home-page/footer/googlePlay.png";
+import appleStore from "../../../assets/images/home-page/footer/appleStore.png";
 import fb from "../../../assets/images/home-page/footer/fb.svg";
 import ig from "../../../assets/images/home-page/footer/ig.svg";
 import tw from "../../../assets/images/home-page/footer/tw.svg";
@@ -62,19 +62,19 @@ const Footer = () => {
           <div className={classes["app-box"]}>
             <h4>NeedaBus App:</h4>
             <div className={classes.buttons}>
-              <Image src={googlePlay} width={160} height={50} alt="img" />
-              <Image src={appleStore} width={130} height={60} alt="img" />
+              <Image src={googlePlay} width={120} height={50} objectFit='cover' alt="img" />
+              <Image src={appleStore} width={110} height={34} alt="img" objectFit="contain" />
             </div>
           </div>
 
-          <div className={classes['media-box']}>
-              <h4>NeedaBus pe:</h4>
-              <div className={classes.buttons}>
+          <div className={classes["media-box"]}>
+            <h4>NeedaBus pe:</h4>
+            <div className={classes.buttons}>
               <Image src={fb} width={13} height={25} alt="img" />
               <Image src={ig} width={25} height={25} alt="img" />
               <Image src={tw} width={25} height={25} alt="img" />
               <Image src={wt} width={25} height={25} alt="img" />
-              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,10 @@
 @import "../../../styles/helpers.scss";
 
 header.navbar {
-  min-height: 10vh;
-  width: 100%;
+  height: 77px;
+  max-height: 77px;
+  display: flex;
+  align-items: center;
   background-color: white;
   position: relative;
   overflow: hidden;
@@ -17,7 +19,7 @@ header.navbar {
     align-items: center;
     max-width: 1366px;
     margin: auto;
-    padding: 20px;
+    padding: 0px 20px;
     overflow: hidden;
   }
 
@@ -68,7 +70,6 @@ header.navbar {
 
     &.active {
       .line {
-
         &:nth-child(2) {
           transform: translateX(1000%);
         }

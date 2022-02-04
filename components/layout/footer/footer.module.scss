@@ -30,10 +30,15 @@ footer.footer {
 
         p {
           font-size: 1rem;
-          font-weight: 500;
+          font-weight: normal;
           letter-spacing: 0.8px;
           color: #000;
           cursor: pointer;
+          transition: 0.2 ease all;
+
+          &:hover {
+            color: darken(#00d53a, 8%);
+          }
         }
       }
     }

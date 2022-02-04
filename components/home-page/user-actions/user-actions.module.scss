@@ -13,6 +13,20 @@
     box-shadow: 0 1px 6px 0 rgba(0, 167, 255, 0.15);
     border: solid 1px #00d53a;
     background-color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      border: solid 1px darken(#00d53a, 8%);
+      box-shadow: 0 1px 8px 0 rgba(0, 166, 255, 0.25);
+      transform: scale(1.04);
+
+      p {
+        color: darken(#00d53a, 8%);
+        transition: all 0.2s ease-in-out;
+      }
+    }
 
     @include center;
     gap: 20px;
@@ -39,7 +53,6 @@
   }
 }
 
-
 @media (max-width: 700px) {
   .user-actions {
     grid-template-columns: minmax(322px, 200px);
@@ -51,9 +64,8 @@
     }
 
     .button:nth-child(3) {
-      grid-row:auto;
+      grid-row: auto;
       grid-column: auto;
     }
   }
 }
-

@@ -42,6 +42,11 @@ section.infos {
       letter-spacing: 0.8px;
       color: #f0bc2d;
       cursor: pointer;
+      transition: 0.2s ease all;
+
+      &:hover {
+        color: darken(#f0bc2d, 8%);
+      }
     }
   }
 }
@@ -53,7 +58,6 @@ section.infos {
     row-gap: 80px;
   }
 }
-
 
 @media (max-width: 600px) {
   section.infos {
