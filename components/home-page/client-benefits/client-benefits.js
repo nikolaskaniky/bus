@@ -5,11 +5,17 @@ import first from "../../../assets/images/home-page/client-benefits/first@3x.png
 import second from "../../../assets/images/home-page/client-benefits/second@3x.png";
 import third from "../../../assets/images/home-page/client-benefits/third@3x.png";
 import forth from "../../../assets/images/home-page/client-benefits/forth@3x.png";
+import { motion } from 'framer-motion';
 
 const ClientBenefits = () => {
   return (
     <section className={classes["clients-benefits"]}>
-      <div className={classes.box}>
+      <motion.div className={classes.box}
+        initial={{transform: `translateX(-20%)`}}
+        whileInView={{ transform: `translateX(0%)` }}
+        viewport={{ once: true }}
+        transition={{duration: 0.4}}
+      >
         <div className={classes["image-wrapper"]}>
           <Image src={first} layout="fill" alt="img" />
         </div>
@@ -23,9 +29,14 @@ const ClientBenefits = () => {
           </p>
           <h4>1</h4>
         </div>
-      </div>
+      </motion.div>
 
-      <div className={`${classes.box} ${classes.reverse}`}>
+      <motion.div className={`${classes.box} ${classes.reverse}`}
+       initial={{transform: `translateX(20%)`}}
+       whileInView={{ transform: `translateX(0%)` }}
+       viewport={{ once: true }}
+       transition={{duration: 0.4}}
+      >
         <div className={classes.presentation}>
           <h1>Cum se simt clientii nostrii</h1>
           <p>
@@ -39,9 +50,14 @@ const ClientBenefits = () => {
         <div className={classes["image-wrapper"]}>
           <Image src={second} layout="fill" alt="img" />
         </div>
-      </div>
+      </motion.div>
 
-      <div className={classes.box}>
+      <motion.div className={classes.box}
+       initial={{transform: `translateX(-20%)`}}
+       whileInView={{ transform: `translateX(0%)` }}
+       viewport={{ once: true }}
+       transition={{duration: 0.4}}
+      >
         <div className={classes["image-wrapper"]}>
           <Image src={third} layout="fill" alt="img" />
         </div>
@@ -55,9 +71,14 @@ const ClientBenefits = () => {
           </p>
           <h4>3</h4>
         </div>
-      </div>
+      </motion.div>
 
-      <div className={`${classes.box} ${classes.reverse}`}>
+      <motion.div className={`${classes.box} ${classes.reverse}`}
+       initial={{transform: `translateX(20%)`}}
+       whileInView={{ transform: `translateX(0%)` }}
+       viewport={{ once: true }}
+       transition={{duration: 0.4}}
+      >
         <div className={classes.presentation}>
           <h1>Cum se simt clientii nostrii</h1>
           <p>
@@ -71,7 +92,7 @@ const ClientBenefits = () => {
         <div className={classes["image-wrapper"]}>
           <Image src={forth} layout="fill" alt="img" />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
