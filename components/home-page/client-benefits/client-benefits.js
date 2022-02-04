@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./client-benefits.module.scss";
 import Image from "next/image";
 import first from "../../../assets/images/home-page/client-benefits/first@3x.png";
