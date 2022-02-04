@@ -5,16 +5,17 @@ import first from "../../../assets/images/home-page/client-benefits/first@3x.png
 import second from "../../../assets/images/home-page/client-benefits/second@3x.png";
 import third from "../../../assets/images/home-page/client-benefits/third@3x.png";
 import forth from "../../../assets/images/home-page/client-benefits/forth@3x.png";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const ClientBenefits = () => {
   return (
     <section className={classes["clients-benefits"]}>
-      <motion.div className={classes.box}
-        initial={{transform: `translateX(-20%)`}}
-        whileInView={{ transform: `translateX(0%)` }}
+      <motion.div
+        className={classes.box}
+        initial={{ transform: `translateX(-40%)`, opacity: 0 }}
+        whileInView={{ transform: `translateX(0%)`, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{duration: 0.4}}
+        transition={{ duration: 1, type: "Inertia" }}
       >
         <div className={classes["image-wrapper"]}>
           <Image src={first} layout="fill" alt="img" />
@@ -31,11 +32,12 @@ const ClientBenefits = () => {
         </div>
       </motion.div>
 
-      <motion.div className={`${classes.box} ${classes.reverse}`}
-       initial={{transform: `translateX(20%)`}}
-       whileInView={{ transform: `translateX(0%)` }}
-       viewport={{ once: true }}
-       transition={{duration: 0.4}}
+      <motion.div
+        className={`${classes.box} ${classes.reverse}`}
+        initial={{ transform: `translateX(40%)`, opacity: 0 }}
+        whileInView={{ transform: `translateX(0%)`, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, type: "Inertia" }}
       >
         <div className={classes.presentation}>
           <h1>Cum se simt clientii nostrii</h1>
@@ -52,11 +54,12 @@ const ClientBenefits = () => {
         </div>
       </motion.div>
 
-      <motion.div className={classes.box}
-       initial={{transform: `translateX(-20%)`}}
-       whileInView={{ transform: `translateX(0%)` }}
-       viewport={{ once: true }}
-       transition={{duration: 0.4}}
+      <motion.div
+        className={classes.box}
+        initial={{ transform: `translateX(-40%)`, opacity: 0 }}
+        whileInView={{ transform: `translateX(0%)`, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, type: "Inertia" }}
       >
         <div className={classes["image-wrapper"]}>
           <Image src={third} layout="fill" alt="img" />
@@ -73,11 +76,12 @@ const ClientBenefits = () => {
         </div>
       </motion.div>
 
-      <motion.div className={`${classes.box} ${classes.reverse}`}
-       initial={{transform: `translateX(20%)`}}
-       whileInView={{ transform: `translateX(0%)` }}
-       viewport={{ once: true }}
-       transition={{duration: 0.4}}
+      <motion.div
+        className={`${classes.box} ${classes.reverse}`}
+        initial={{ transform: `translateX(40%)`, opacity: 0 }}
+        whileInView={{ transform: `translateX(0%)`, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, type: "Inertia" }}
       >
         <div className={classes.presentation}>
           <h1>Cum se simt clientii nostrii</h1>
