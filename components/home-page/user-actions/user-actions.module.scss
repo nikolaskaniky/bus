@@ -14,9 +14,9 @@
     border: solid 1px #00d53a;
     background-color: #fff;
     cursor: pointer;
+    transition: all 0.2s ease;
 
     &:hover {
-      transition: all 0.3s ease-in-out;
       cursor: pointer;
       border: solid 1px darken(#00d53a, 8%);
       box-shadow: 0 1px 8px 0 rgba(0, 166, 255, 0.25);
@@ -24,7 +24,6 @@
 
       p {
         color: darken(#00d53a, 8%);
-        transition: all 0.2s ease-in-out;
       }
     }
 
@@ -35,6 +34,7 @@
       font-size: 1rem;
       font-weight: normal;
       color: #000;
+      transition: all 0.2s ease-in-out;
     }
   }
 }

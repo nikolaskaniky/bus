@@ -87,6 +87,11 @@ section.table {
       background-color: #f0bc2d;
       @include center;
       cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: darken(#f0bc2d, 10%);
+      }
 
       p {
         font-size: 1rem;
