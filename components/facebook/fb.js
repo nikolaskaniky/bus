@@ -4,6 +4,7 @@ export function initFbMessenger() {
   var chatbox = document.getElementById("fb-customer-chat");
   chatbox.setAttribute("page_id", "584689638543871");
   chatbox.setAttribute("attribution", "biz_inbox");
+  console.log(chatbox, 'test')
 
   window.fbAsyncInit = function () {
     FB.init({
