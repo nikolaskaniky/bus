@@ -3,7 +3,7 @@ import { initFbMessenger, cleanupFbMessenger } from "./fb";
 
 export function FbMessenger() {
   useEffect(() => {
-    // console.log("Fb Messenger");
+    console.log("Fb Messenger");
     initFbMessenger();
 
     return () => {
